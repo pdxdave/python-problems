@@ -5,7 +5,7 @@
 def csFindAddedLetter(str_1, str_2):
 
     '''
-    We use a for loop to go through the day, then compare str_1
+    We use a for loop to go through the strings, then compare str_1
     to str_2. This comparison counts the occurance of each letter
     , and from that determines which string is longer.
     '''
