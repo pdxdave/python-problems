@@ -38,3 +38,14 @@ Starting with the range. ord('a') will return 97. ord(chr(97 + groups))) will fi
 
 The results [: -2] returns the solution without the trailing comma and quote mark.
 '''
+
+#2
+
+def csSchoolYearsAndGroups(years, groups):
+
+    res = []
+
+    for i in range(1, years + 1):
+        for j in range(97. groups + 97):
+            res.append(f"{i}{chr(j)}")
+    return ", ".join(res)
