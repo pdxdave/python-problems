@@ -44,7 +44,7 @@ target = 11
 print(csSortedTwoSum(numbers, target))
 
 
-# 3  Perhaps the easist to understand 0(n) time complexity
+# 3  Perhaps the easiest to understand 0(n) time complexity
 def csSortedTwoSum(numbers, target):
     
     # set pointers
