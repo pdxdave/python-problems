@@ -15,7 +15,7 @@ def firstUniqChar(input_str):
             else:
                 lookup[i] = 1
                 
-        # The second look identifies the indext of thefirst unique
+        # The second loop identifies the index of the first unique
         # non repeating character
         for index, value in enumerate(input_str):
             if lookup[value] == 1:
