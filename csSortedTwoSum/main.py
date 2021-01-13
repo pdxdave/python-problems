@@ -65,3 +65,17 @@ def csSortedTwoSum(numbers, target):
 numbers = [1, 3, 7, 9]
 target = 12
 print(csSortedTwoSum(numbers, target))
+
+
+# 4
+def csSortedTwoSum(numbers, target):
+    
+    for index1, value1 in enumerate(numbers):
+        for index2, value2 in enumerate(numbers):
+            if (value1 + value2) == target:
+                return [index1, index2]
+                break
+
+numbers = [3, 8, 12, 16]
+target = 28
+print(csSortedTwoSum(numbers, target))
