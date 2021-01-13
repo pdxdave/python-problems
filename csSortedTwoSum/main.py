@@ -28,3 +28,40 @@ def csSortedTwoSum(numbers, target):
 numbers = [3,8,12,16]
 target = 11
 print(csSortedTwoSum(numbers, target))
+
+
+# 2
+def csSortedTwoSum(numbers, target):
+    result={}
+    for index,value in enumerate(numbers):
+        if target-value in result:
+            return[result[target-value],index]
+        else:
+            result[value]=index
+    
+numbers = [3, 8, 12, 16]
+target = 11
+print(csSortedTwoSum(numbers, target))
+
+
+# 3  Perhaps the easist to understand 0(n) time complexity
+def csSortedTwoSum(numbers, target):
+    
+    # set pointers
+    left, right = 0, len(numbers) - 1
+    
+    while left < right:
+        
+        currSum = numbers[left] + numbers[right]
+        
+        if currSum > target:
+            right -= 1
+        elif currSum < target:
+            left += 1
+        else:
+            return [left, right]
+    return []
+    
+numbers = [1, 3, 7, 9]
+target = 12
+print(csSortedTwoSum(numbers, target))
