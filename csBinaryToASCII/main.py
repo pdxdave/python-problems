@@ -32,3 +32,23 @@ it as an int.  So something like "01100001" would return 97.
 chr() takes the unicode number of 97 and converts it to the letter "l"
 
 '''
+
+#2 like the one above, but I brown down the for loop
+def csSortedTwoSum(numbers):
+ 
+    container = []
+    
+    for i in range(0, len(numbers), 8):
+        numberSets = numbers[i:i+8]
+        container += [numberSets]
+        
+    decoded = ""
+    for binary_letter in container:
+        letter = chr(int(binary_letter, 2))
+        decoded += letter
+    return decoded
+    # return container
+ 
+ 
+numbers = "011011000110000101101101011000100110010001100001"
+print(csSortedTwoSum(numbers))
