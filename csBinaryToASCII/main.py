@@ -33,7 +33,7 @@ chr() takes the unicode number of 97 and converts it to the letter "l"
 
 '''
 
-#2 like the one above, but I brown down the for loop
+#2 like the one above, but I broke down the for loop
 def csSortedTwoSum(numbers):
  
     container = []
