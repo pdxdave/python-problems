@@ -18,7 +18,7 @@ def csSearchRotatedSortedArray(nums, target):
         # set mid point. here it's index 3, number 1
         mid = (low + high) // 2
         
-        # hail marry 
+        # hail mary 
         if target == nums[mid]:
             return mid 
         # first pass.
