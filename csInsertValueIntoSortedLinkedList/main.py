@@ -19,7 +19,7 @@ def insertValueIntoSortedLinkedList(l, value):
         return x
         
     next_node = currentNode.next   
-     
+    
     if next_node == None:
         l.next = x
         return l
