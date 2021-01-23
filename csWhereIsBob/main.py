@@ -14,11 +14,15 @@ def csWhereIsBob(names):
     # by 1 (by default), and stops before a specified number.
     # The len() function returns the numbers of the items in
     # an object
-
     for i in range(len(names)):
         if names[i] == "Bob":
             return i
     return -1
+
+
+    # A third solution
+    person = [key for (key, value) in enumerate(names) if value == "Bob"]
+    return person
 
 names = ["Kelly", "Pete", "Bob"]
 print(csWhereIsBob(names))
