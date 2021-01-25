@@ -4,6 +4,7 @@ def fibonacciSimpleSum2(n):
     num1 = 0
     num2 = 1
     
+    # F[-1] is the last number in the list
     while F[-1] <= n:
         if n - F[-1] in F:
             return True
