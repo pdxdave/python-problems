@@ -41,3 +41,32 @@ def balancedBinaryTree(root):
         return True
     
     return False
+
+
+# 2
+
+# Binary trees are already defined with this interface:
+# class Tree(object):
+#   def __init__(self, x):
+#     self.value = x
+#     self.left = None
+#     self.right = None
+def balancedBinaryTree(root):
+
+    # If there is no root, return true
+    if not root:
+        return True 
+        
+    # Get the right and lefth depth
+    r = getDepth(root.right)
+    l = getDepth(root.left)
+    
+    if(l - r) <= 1:
+        return balancedBinaryTree(root.left) and balancedBinaryTree(root.right)
+    else:
+        return False
+        
+def getDepth(root):
+    if root == None:
+        return 0
+    return 1 + max(getDepth(root.left), getDepth(root.right))
