@@ -21,10 +21,8 @@ Input: graph = [[1, 2],[3],[3],[4],[]]
 Output: [[0,1,3,4], [0,2,3,4]]
 '''
 
+   
 '''
-index   0     1   2   3  4
-     [[1, 2],[3],[3],[4],[]]
-
      [1,2] means that 0 has an outgoing edge to 1 and 2
      [3]   means that 1 has an outgoing edge to 3
      [3]   means that 2 has an outgoing edge to 3
@@ -32,8 +30,6 @@ index   0     1   2   3  4
      []    means that 4 does not have an outgoing edge
 
   Start with the source node 0. This would be [1,2]
-
-    
 '''
 #1 
 def csFindAllPathsFromAToB(graph):
