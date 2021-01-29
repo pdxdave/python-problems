@@ -16,12 +16,16 @@ Output: 80
 '''
 
 def csFindTheSingleNumber(nums):
+    # store numbers in a dictionary
     res = {}
     for num in nums:
         if num not in res:
+            # take number and assign it to a value of one
             res[num] = 1
         else:
+            # else, take that number and add one to it
             res[num] += 1
+    # look for the item with only one of them
     for key, val in res.items():
         if val == 1:
             return key
