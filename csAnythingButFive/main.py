@@ -26,10 +26,10 @@ print(csAnythingButFive(start, end))
 
 # 2
 def csAnythingButFive(start, end):
-    temp = [str(x) for x in range(start, end + 1)]
+    temp = [x for x in range(start, end + 1)]
     res = []
     for i in temp:
-        if "5" not in i:
+        if i != 5:
             res.append(i)
     return len(res)
     
