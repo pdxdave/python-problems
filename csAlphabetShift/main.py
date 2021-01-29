@@ -30,7 +30,7 @@ print(alphabetShift(inputString))
     
     ord() returns the integer that represents a letter; for instance 'a' would return 97.
 
-    In the case of line 12, 'z' has a unicord number of 122.  If we subtract 25 from 122 that gives us 97, which is an 'a'
+    In the case of line 12, 'z' has a unicode number of 122.  If we subtract 25 from 122 that gives us 97, which is an 'a'
 
     chr() returns the character that represents the unicode number.
 
