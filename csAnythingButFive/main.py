@@ -27,11 +27,11 @@ print(csAnythingButFive(start, end))
 # 2
 def csAnythingButFive(start, end):
     temp = [x for x in range(start, end + 1)]
-    res = []
+    count = 0
     for i in temp:
         if i != 5:
-            res.append(i)
-    return len(res)
+            count += 1
+    return count
     
 start = 1
 end = 9
