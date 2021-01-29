@@ -36,3 +36,14 @@ def csAnythingButFive(start, end):
 start = 1
 end = 9
 print(csAnythingButFive(start, end))
+
+# 3
+def csAnythingButFive(start, end):
+    
+    temp = [x for x in range(start, end + 1) if x != 5]
+    
+    return (len(temp))
+    
+start = 1
+end = 9
+print(csAnythingButFive(start, end))
