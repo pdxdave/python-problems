@@ -11,16 +11,14 @@ csAnythingButFive(4, 17) -> 4,6,7,8,9,10,11,12,13,14,16,17 -> 12
 # 1
 def csAnythingButFive(start, end):
 
-    count = 0
-
+    sum = 0
+    
     for num in range(start, end + 1):
-        # turn int into str so we can access the last number
-        str_num = str(num)
-        if '5' in str_num:
-            continue 
+        if num == 5:
+            continue
         else:
-            count += 1
-    return count 
+            sum += 1
+    return sum
 
 start = 1
 end = 9
