@@ -1,3 +1,27 @@
+'''
+Given a pattern and a string a, find if a follows the same pattern.
+
+Here, to "follow" means a full match, such that there is a one-to-one correspondence between a letter in pattern and a non-empty word in s.
+
+Example 1:
+
+Input:
+pattern = "abba"
+a = "lambda school school lambda"
+
+Output: true
+Example 2:
+
+Input:
+pattern = "abba"
+a = "lambda school school coding"
+
+Output:
+false
+
+'''
+
+
 def csWordPattern(pattern, a):
     
     strs = a.split()
