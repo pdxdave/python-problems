@@ -38,7 +38,13 @@ def csWhereIsBob(names):
 
 
     # 4
-    # Objectiv 11 - list comprehensions
+    # Objectiv 11 - list comprehensions.  Doesn't return -1 if false though
+
+    person = [x for x in names if x == 'Bob']
+    return person
+    
+    # or
+
     person = [key for (key, value) in enumerate(names) if value == "Bob"]
     return person
 
