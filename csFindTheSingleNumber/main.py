@@ -22,6 +22,7 @@ def csFindTheSingleNumber(nums):
         if num not in res:
             # take number and assign it to a value of one
             res[num] = 1
+            # {0: 3, 1: 3, 99: 1}
         else:
             # else, take that number and add one to it
             res[num] += 1

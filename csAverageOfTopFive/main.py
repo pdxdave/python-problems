@@ -10,6 +10,18 @@ Output: [[1,87],[2,88]]
 Explanation:
 The average student `1` is `87`.
 The average of student `2` is `88.6`, but with integer division is `88`.
+
+The key of the map will be the students ID, and the value of the map will be the score.
+
+1. Let's put the user id's and scores in their own list.  For instance, {1: [91, 92], 2: [93, 97]}
+How could we do this?
+
+2. Then we can order the key,values in a tuple using score_map.items().  It would give us something like 
+([(1, [91, 92, 60, 65, 87, 100]), (2, [93, 97, 77, 100, 76])])
+
+3. We can then sort the values in reverse order giving us [100, 92, 91, 87, 65, 60]
+
+4. 
 '''
 
 
