@@ -53,3 +53,32 @@ def insertValueIntoSortedLinkedList(l, value):
     currentNode.next = x
     x.next = next_node
     return l
+
+    # Or Kim's solution 
+
+    def insertValueIntoSortedLinkedList(l, value):
+    # printing to see what I'm working with
+    print(value, l)
+    # create a new_node with the value
+    new_node = ListNode(value)
+    # if there is no list return ListNode
+    if l == None: 
+        return ListNode(value)
+    previous_node = None 
+    next_node = l
+    # looping through where we want to insert the new node
+    while next_node is not None and value > next_node.value: 
+        previous_node = next_node
+        # this will point to the next node in the linked list
+        next_node = next_node.next 
+        
+    # setting the new node.next to the next node
+    new_node.next = next_node 
+    # set the previous_node.next to the new_node 
+    if previous_node is not None: 
+        previous_node.next = new_node
+    else: 
+        l = new_node
+    return l
+        
+ 
