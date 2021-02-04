@@ -1,7 +1,7 @@
 # Only letters and no numbers
 # Only numbers and no letters
 
-# objective 9 - conditional expressions
+# objective 9 - conditional expressions section
 def csAlphanumericRestriction(input_str):
 
     if input_str.isalpha():
