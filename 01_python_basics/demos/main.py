@@ -145,6 +145,7 @@ print(sort_by_length(["aaaaaaaa", "ccc", "dddd", "bbbbbbb"]))
 # ['ccc', 'dddd', 'bbbbbbb', 'aaaaaaaa']
 
 """
+
 And we can use key with a lambda function.  What is a lambda function?
 
 A lambda function is a small anonymous function.
@@ -160,6 +161,26 @@ print(test1(2))
 full_name = lambda fn, ln: fn.strip().title() + " " + ln.strip().title()
 print(full_name("   joe", "SMITH"))
 
-#3
-authors=["joe jackson", "adam anderson", "fred smith"]
-print(test2 = authors.sort(key=lambda name: name.split(" ")[-1].lower()))
+
+"""
+# 9
+
+Write a function that creates a dictionary with each (key, value) pair being
+the (lower case, upper case) versions of a letter.
+
+mapping(["a", "b", "c"]) => {"a": "A", "b": "B", "c": "C"}
+"""
+def mapping(letters):
+
+    lst = {}
+    for i in letters:
+        lst[i] = i.upper()
+
+    return lst
+
+letters = ["a", "b", "c"]
+print(mapping(letters))
+
+
+
+
