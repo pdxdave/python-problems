@@ -67,8 +67,8 @@ def csGroupAnagrams(strs):
         
     for item in dict.values():
         result.append(item)
-    return result
+    return len(result)
 
 
-strs = [123, 895, 312, 213, 644, 446]
+strs = [25, 35, 872, 228, 53, 278, 872]
 print(csGroupAnagrams(strs))
