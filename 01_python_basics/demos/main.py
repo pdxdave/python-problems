@@ -87,12 +87,79 @@ Examples:
 def sort_by_length(lst):
 
     lst.sort()
+    print(f"this is sort {lst}")
+    
+sort_by_length(["a", "ccc", "dddd", "bb"])
+
+def sort_by_length(lst):
+
+    lst.sort(reverse=True)
+    print(f"this is sort with reverse {lst}")
+    
+sort_by_length(["a", "ccc", "dddd", "bb"])
+
+"""
+sort() vs sorted()
+
+sort() will modify the list it is called on.  The sorted() function will create
+a new list containing the sorted version of the given list.
+
+sorted() will return a list so you must assign the returned data to a new
+variable.
+
+"""
+def sort_by_length(lst):
+
+    newSort = sorted(lst)
+    print(f"this is sorted {newSort}")
+    
+sort_by_length(["a", "ccc", "dddd", "bb"])
+
+def sort_by_length(lst):
+
+    newSort = sorted(lst, reverse=True)
+    print(f"this is sorted with reverse {newSort}")
+    
+sort_by_length(["a", "ccc", "dddd", "bb"])
+
+"""
+An example using the key parameter with sorted
+"""
+def sort_by_length(lst):
+
+    newSort = sorted(lst, key=len)
+    return newSort
+    
+print(sort_by_length(["aaaaaaaa", "ccc", "dddd", "bbbbbbb"]))
+# ['ccc', 'dddd', 'bbbbbbb', 'aaaaaaaa']
+
+"""
+An example using the key parameter with sort
+"""
+def sort_by_length(lst):
+
+    lst.sort(key=len)
     return lst
     
-print(sort_by_length(["a", "ccc", "dddd", "bb"]))
+print(sort_by_length(["aaaaaaaa", "ccc", "dddd", "bbbbbbb"]))
+# ['ccc', 'dddd', 'bbbbbbb', 'aaaaaaaa']
 
 """
-A bigger discussion on sort() vs sorted()
+And we can use key with a lambda function.  What is a lambda function?
 
-
+A lambda function is a small anonymous function.
+A lambda function can take any number of arguments, but can only have one expression.
+* lambda arguments : expression
 """
+
+# 1
+test1 = lambda x: 3*x + 1
+print(test1(2))
+
+#2
+full_name = lambda fn, ln: fn.strip().title() + " " + ln.strip().title()
+print(full_name("   joe", "SMITH"))
+
+#3
+authors=["joe jackson", "adam anderson", "fred smith"]
+print(test2 = authors.sort(key=lambda name: name.split(" ")[-1].lower()))
