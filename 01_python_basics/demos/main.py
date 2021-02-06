@@ -3,7 +3,7 @@ https://www.youtube.com/watch?v=VtidkqqPAXQ&list=PL0TTS7q_BAXVVDcBxPcLrNyddAokMW
 '''
 
 """
-# 1
+# Challenge 1
 
 Create a function that takes two numbers as arguments and return their sum.
 
@@ -21,7 +21,7 @@ print(addition(3,2))
 
 
 """
-# 2
+# Challenge 2
 
 Write a function that takes an integer 'minutes' and converts it to seconds
 
@@ -39,7 +39,7 @@ print(convert(5))
 
 
 """
-# 3
+# Challenge 3
 
 Create a function that takes a string and returns it as an integer
 
@@ -56,7 +56,7 @@ print(string_int("6"))
 
 
 """
-# 4
+# Challenge 4
 
 Create a function that takes length and width and finds the perimter of a rectangle
 
@@ -71,7 +71,7 @@ def find_perimeter(length, width):
 print(find_perimeter(6,7))
 
 """
-# 5
+# Challenge 5
 
 Create a function that returns a list of strings sorted by length in ascending order
 
@@ -163,7 +163,67 @@ print(full_name("   joe", "SMITH"))
 
 
 """
-# 9
+# Challenge 6:
+Create a function that takes a string, checks if it has the same number of "x"s
+and "o"s and returns either True or False.
+
+- Return a boolean value (True or False).
+- The string can contain any character.
+- When no x and no o are in the string, return True.
+
+Examples:
+- XO("ooxx") ➞ True
+- XO("xooxx") ➞ False
+- XO("ooxXm") ➞ True (Case insensitive)
+- XO("zpzpzpp") ➞ True (Returns True if no x and o)
+- XO("zzoo") ➞ False
+"""
+# 1
+def xo(txt):
+    
+    x_count = 0
+    o_count = 0
+    
+    for i in txt.lower():
+        if i == 'x':
+            x_count += 1
+        elif i == 'o':
+            o_count += 1
+    
+    if x_count == o_count:
+        return True
+    else:
+        return False
+
+
+txt = "ooxXm"
+print(xo(txt))
+
+# 2
+def xo(txt):
+    
+    x_count = ""
+    o_count = ""
+    
+    for i in txt.lower():
+        if i == 'x':
+            x_count += 'x'
+        elif i == 'o':
+            o_count += 'o'
+    
+    if len(x_count) == len(o_count):
+        return True
+    else:
+        return False
+
+txt = "ooxXm"
+print(xo(txt))
+
+#3
+
+
+"""
+# Challenge 9
 
 Write a function that creates a dictionary with each (key, value) pair being
 the (lower case, upper case) versions of a letter.
