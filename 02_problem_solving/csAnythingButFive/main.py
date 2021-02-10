@@ -10,15 +10,16 @@ csAnythingButFive(4, 17) -> 4,6,7,8,9,10,11,12,13,14,16,17 -> 12
 
 # 1
 def csAnythingButFive(start, end):
-
-    sum = 0
+    
+    count = 0
     
     for num in range(start, end + 1):
-        if num == 5:
+        str_num = str(num)
+        if '5' in str_num:
             continue
         else:
-            sum += 1
-    return sum
+            count += 1
+    return count
 
 start = 1
 end = 9
@@ -29,7 +30,9 @@ def csAnythingButFive(start, end):
     temp = [x for x in range(start, end + 1)]
     count = 0
     for i in temp:
-        if i != 5:
+        if '5' in str(i):
+            continue
+        else:
             count += 1
     return count
     
@@ -40,7 +43,7 @@ print(csAnythingButFive(start, end))
 # 3
 def csAnythingButFive(start, end):
     
-    temp = [x for x in range(start, end + 1) if x != 5]
+    temp = [x for x in range(start, end + 1) if '5' not in str(x)]
     
     return (len(temp))
     
