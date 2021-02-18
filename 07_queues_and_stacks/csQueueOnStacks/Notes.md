@@ -2,7 +2,7 @@ Two operations:
 Enqueue (put something in line) - enqueue always goes in at the end of the line
 Dequeue (take something out of line) - always takes from the front of the line
 
-```
+'''
 class Queue:
     def __init__(self):
         self.queue = []
@@ -30,7 +30,7 @@ print(q.dequeue())
 '''
 
 # Linked List
-```
+'''
 class ListNode:
     def __init__(self, value)
     self.value = value
@@ -74,5 +74,4 @@ q.enqueue(ListNode(5))
 print(q.dequeue())
 print(q.dequeue())
 print(q.dequeue())
-
-```
+'''
