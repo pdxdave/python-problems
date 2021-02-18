@@ -93,9 +93,14 @@ The last item you push is the first item you pop
 
 ```
 class ListNode:
-    def __init__(self, value)
-    self.value = value
-    self.next = None
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+    
+    <!-- def __repr__(self):
+        return f"ListNode({repr(self.value)}) -->
+
+
 
 class Stack:
     def __init__(self):
