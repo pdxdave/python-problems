@@ -41,8 +41,8 @@ class Queue:
         self.head = None
         self.tail = None
 
-    def enqueue(self, n):
-        # special casse: enqueu on an empty queue
+    def enqueue(self, n): # 0(1)
+        # special case: enqueu on an empty queue
         if self.head is None:
             self.head = n
             self.tail = n
@@ -52,7 +52,16 @@ class Queue:
         self.tail.next = n
         self.tail = n
 
-    def dequeue(self):
+    def dequeue(self): # 0(1)
+
+        # special case: dequeue the last item
+        if self.head == self.tail:
+            prev_head = self.head
+            self.head = self.tail = None
+            return prev_head
+
+
+        # general case
         prev_head = self.head # keeps track of the head so we can return it
         self.head = self.head.next
         prev_head.next = None # disconnects it from list
