@@ -26,6 +26,7 @@ def queueOnStacks(requests):
     left = Stack()
     right = Stack()
 
+    # 1st solution
     def insert(x):
         # insert code here
         left.push(x)
@@ -38,6 +39,22 @@ def queueOnStacks(requests):
             if len(right.items) == 0:
                 return None 
         return right.pop()
+
+    # second solution
+    def insert(x):
+        left.push(x)
+
+    def remove():
+        # isEmpty refers to class Stack
+        while not left.isEmpty():
+            popped = left.pop() 
+            right.push(popped)
+        ls = right.pop() 
+        
+        while not right.isEmpty():
+            popped = right.pop() 
+            left.push(popped)
+        return ls
 
     ans = []
     for request in requests:
