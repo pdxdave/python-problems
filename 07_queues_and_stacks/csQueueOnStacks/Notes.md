@@ -1,6 +1,6 @@
 Two operations:
-Enqueue (put something in line) - enqueue always goes in at the end of the line
-Dequeue (take something out of line) - always takes from the front of the line
+Enqueue (put something in line) - enqueue always goes in at the end of the line    
+Dequeue (take something out of line) - always takes from the front of the line    
 
 ```
 class Queue:
@@ -84,3 +84,9 @@ print(q.dequeue())
 print(q.dequeue())
 print(q.dequeue())
 ```
+# Stacks
+
+Push: add an item to the top of the stack    
+Pop: remove an item from the top of the stack    
+
+The last item you push is the first item you pop
