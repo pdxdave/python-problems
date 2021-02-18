@@ -1,4 +1,4 @@
-Two operations:
+Two operations:     
 Enqueue (put something in line) - enqueue always goes in at the end of the line    
 Dequeue (take something out of line) - always takes from the front of the line    
 
@@ -90,3 +90,41 @@ Push: add an item to the top of the stack
 Pop: remove an item from the top of the stack    
 
 The last item you push is the first item you pop
+
+```
+class ListNode:
+    def __init__(self, value)
+    self.value = value
+    self.next = None
+
+class Stack:
+    def __init__(self):
+        self.head = None
+
+    def push(self, n): # 0(1)
+        n.next = self.head
+        self.head = n
+
+    def pop(self): # 0(1)
+        if self.head is None:
+            return None
+        
+        prev_head = self.head
+        self.head = self.head.next
+        prev_head.next = None
+
+        return prev_head
+
+
+s = Stack()
+
+s.push(ListNode(1))
+s.push(ListNode(2))
+s.push(ListNode(3))
+s.push(ListNode(4))
+
+print(s.pop())
+print(s.pop())
+print(s.pop())
+print(s.pop())
+```
