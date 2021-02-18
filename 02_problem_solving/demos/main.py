@@ -217,21 +217,55 @@ There is no index that satisfies the conditions in the problem statement.
 
 ** With each pass it is generating a sum of the left_sub and right_sub, EXCLUDING
 the pivot point which is the index we need to identify.  If the sums of the left
-and right subs are the same, then we have found our pivot point.
+and right subs are the same, then we have found our pivot point.  nums[0:i] and 
+nums[i+1:] creates a gap to identify the pivot point.  It's the i+1 that does that since
+the other one is [0:i]
 """
 
 def pivot_index(nums):
 
+        # 1
+        # for i in range(len(nums)):
+            
+        #     left_sub = nums[0:i]
+        #     right_sub = nums[i+1:]
+            
+        #     left_tot = sum(left_sub)
+        #     right_tot = sum(right_sub)
+            
+        #     if left_tot == right_tot:
+        #         print(i)
+
+        # 2 faster solution
+        l_sum = 0
+        r_sum = sum(nums[1:])
+        
         for i in range(len(nums)):
+            if l_sum == r_sum:
+                return i 
             
-            left_sub = nums[0:i]
-            right_sub = nums[i+1:]
+            l_sum += nums[i]
+
+            # check that we are not the last index of the array
+            if(i+1 == len(nums)):
+                r_sum = 0
+            else:
+                r_sum -= nums[i+1]
+        return -1
+
+        # 3 solution
+        right = sum(nums)
+        left = 0
+        
+        for i, num in enumerate(nums):
             
-            left_tot = sum(left_sub)
-            right_tot = sum(right_sub)
+            right -= num
             
-            if left_tot == right_tot:
-                print(i)
+            if right == left:
+                return i
+                
+            left += num
+        return -1
 
 nums = [1,7,3,6,5,6]
 pivot_index(nums)
