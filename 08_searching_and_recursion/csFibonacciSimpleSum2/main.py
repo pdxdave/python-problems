@@ -23,6 +23,7 @@ fibonacciSimpleSum2(n) = false.
 
 
 '''
+# 1 solution
 def fibonacciSimpleSum2(n):
     
     F = [0,1]
@@ -38,6 +39,23 @@ def fibonacciSimpleSum2(n):
             num2 = num1
             num1 = next
             F.append(next)
+    return False
+    
+n = 66
+print(fibonacciSimpleSum2(n))
+
+# 2 solution
+def fibonacciSimpleSum2(n):
+    
+    F = [0,1]
+    
+    while F[-1] < n:
+        F.append(F[-2] + F[-1])
+    for x in F:
+        for y in F:
+            if x + y == n:
+                return True
+                
     return False
     
 n = 66
