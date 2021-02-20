@@ -5,6 +5,14 @@ Example
 
 For statues = [6, 2, 3, 8], the output should be
 makeArrayConsecutive2(statues) = 3.
+
+What's happening here. First we sort the array to [2, 3, 6, 8].     
+Next, we point our pointer on index 1 and compare it to index 0.    
+If there's a difference of more than 1, then we subtract index 0 from 1    
+and shave off one additional.  The reason for this is because we're looking    
+for how many numbers are needed to close the gap.
+For instance, 6 - 3 = 3, but from 3 to 6 only requires to additional     
+numbers: 4 and 5.  In this case, it takes two numbers to close that gap.
 '''
 def makeArrayConsecutive2(statues):
     count = 0
@@ -13,7 +21,7 @@ def makeArrayConsecutive2(statues):
         if statues[i+1] - statues[i] > 1:
             count += statues[i+1] - statues[i] - 1
             
-    return count
+    return count 
 
 statues = [6,2,3,8]
 print(makeArrayConsecutive2(statues))
