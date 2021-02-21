@@ -17,7 +17,7 @@ numbers: 4 and 5.  In this case, it takes two numbers to close that gap.
 def makeArrayConsecutive2(statues):
     count = 0
     statues.sort()
-    for i in range(0, len(statues)-1):
+    for i in range(len(statues)-1):
         if statues[i+1] - statues[i] > 1:
             count += statues[i+1] - statues[i] - 1
             
