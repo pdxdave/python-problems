@@ -57,7 +57,7 @@ class BSTNode:
     #     if self.right is not None:
     #         self.right.print_tree()
 
-    # 3rd print option
+    # 3rd print option / In order traversal
     def print_tree(self):
         if self.left is not None:
             self.left.print_tree()
@@ -105,3 +105,20 @@ class BinaryTreeNode:
         largest_height = max(right_height, left_height)
 
         return 1 + largest_height
+
+'''
+post-order printing
+    go left
+    go right
+    print
+
+pre-order printing
+    print
+    go right
+    go left
+
+in-order printing
+    go left
+    print
+    go right
+```
