@@ -30,7 +30,7 @@ class BSTNode:
                 self.right.insert(value)
 
     def search(self, target):
-        # hale marry search. get it on first pass
+        # hail mary search. get it on first pass
         if target == self.value:
             return True
 
