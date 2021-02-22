@@ -81,3 +81,27 @@ root.insert(11)
 
 # 2nd & 3rd print option
 root.print_tree()
+
+
+# NEW PROBLEM. FIND MAX DEPTH OF BINARY TREE
+
+class BinaryTreeNode:
+    def __init__(self, value=0, left=None, right=None):
+        self.value = value 
+        self.left = left 
+        self.right = right 
+
+    def maxDepth(self, root):
+        # if no left or right after root node, return 1
+        right_height = 0
+        left_height = 0
+
+        if self.right:
+            right_height = self.maxDepth(self.right)
+
+        if self.left:
+            left_height = self.maxDepth(self.left)
+
+        largest_height = max(right_height, left_height)
+
+        return 1 + largest_height
