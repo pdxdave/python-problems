@@ -103,3 +103,48 @@ def dft(root, output, path):
     dft(root.right, output, path)
     
     path.pop()
+
+
+# PLUG INTO PYTHON TUTOR FOR WALKTHROUGH
+
+class Tree(object):
+  def __init__(self, x):
+    self.value = x
+    self.left = None
+    self.right = None
+    
+def treePaths(t):
+    
+    if t is None:
+        return []
+        
+    output = []
+    dft(t, output, [])
+    print(output) 
+    
+def is_leaf(node):
+    return node.left is None and node.right is None
+    
+def dft(root, output, path):
+    
+    if root is None:
+        return
+        
+    path.append(f'{root.value}')
+    
+    if is_leaf(root):
+        output.append("->" .join(path[:]))
+        
+    dft(root.left, output, path)
+    dft(root.right, output, path)
+    
+    path.pop()
+    
+
+root = Tree(5) 
+root.left = Tree(2) 
+root.right = Tree(-3) 
+root.left.left = Tree(10) 
+root.left.right = Tree(4) 
+
+treePaths(root)
