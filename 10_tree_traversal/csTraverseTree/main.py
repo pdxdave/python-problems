@@ -38,6 +38,14 @@ def traverseTree(t):
   2     4
    \   /
     3 5
+
+[1, 2, 4, 3, 5]
+
+1. Populate the tree with values.  They're in our queue.
+2. Pop off the first value in the queue, which is 1.
+3. 1 is the curNode.
+4. Append currNode to values, gives us [1]
+5. 
 '''
 
 class Tree(object):

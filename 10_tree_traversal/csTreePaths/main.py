@@ -148,3 +148,53 @@ root.left.left = Tree(10)
 root.left.right = Tree(4) 
 
 treePaths(root)
+
+
+# Solution 2
+'''
+The given tree looks like this:
+
+    5
+   / \
+  2  -3
+ / \
+10  4
+'''
+class Tree(object):
+  def __init__(self, x):
+    self.value = x
+    self.left = None
+    self.right = None
+    
+def treePaths(t):
+    
+    output = []
+    temp = []
+    
+    def dft(root, output, path):
+        
+        if root is None:
+            return 
+            
+        path.append(str(root.value))
+        
+        if root.left is None and root.right is None:
+            output.append("->".join(path))
+            
+        dft(root.left, output, path)
+        dft(root.right, output, path)
+        
+        path.pop()
+        
+    dft(t, output, temp)
+    
+    return output
+    
+
+root = Tree(5) 
+root.left = Tree(2) 
+root.right = Tree(-3) 
+root.left.left = Tree(10) 
+root.left.right = Tree(4) 
+
+treePaths(root)
