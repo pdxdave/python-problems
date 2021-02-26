@@ -90,3 +90,11 @@ friendships = [
     [0,0,1]
     ]
 print(csFriendCircles(friendships))
+
+'''
+A couple of things we need to solve
+1. We need a counter for the groups
+2. We need to see if we've seen a person so we don't find ourselves in a loop.
+3. We need to be able to loop through each person, and also the associations w/in each person
+
+'''

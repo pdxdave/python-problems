@@ -20,7 +20,7 @@ removes 'y' from the picture and makes it 'z'.
 Then set current_node.next = current_node.next.next.  This is basically pointing
 to what the original 'z' was pointing to.
 ```
-
+x y z
 ```
 class LinkedListNode():
     def __init__(self, value):
@@ -44,7 +44,7 @@ x = LinkedListNode('x')
 y = LinkedListNode('y')
 z = LinkedListNode('z')
 
-# this code links the nodes
+# this code links the nodesne
 x.next = y
 y.next = z
 
