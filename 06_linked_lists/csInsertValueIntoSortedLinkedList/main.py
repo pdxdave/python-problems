@@ -54,6 +54,48 @@ def insertValueIntoSortedLinkedList(l, value):
     x.next = next_node
     return l
 
+
+    # ----------
+
+    def insertValueIntoSortedLinkedList(l, value):
+
+        new_node = listNode(value)
+
+        # if the list is empty, return the passed value to the ListNode
+        if l is None:
+            return ListNode(value)
+
+        prev_node = None 
+        # the current node starts as the first node of the list
+        curr_node = l
+
+        while curr_node is not None and value > curr_node.value:
+            prev_node = curr_node 
+            curr_node = curr_node.next 
+        new_node.next = curr_node
+
+        if prev_node is not None:
+            prev_node.next = new_node
+        else:
+            l = new_node
+        return l
+
+    '''
+    Walkthrough. 
+    l = [1,3,4,6], value = 5
+    On the first while loop pass, 1 is the curr_node.  If it is not none,
+    and value 5 > than 1, then 1 is tagged as the prev_node, and the
+    current_node.next is set to curr_node, that being 3.
+
+    When 5 is not greater than curr_node.value (e.g. 6), then the
+    curr_node(6) is made the new_node.next. [1,3,4,6].
+    If the prev_node(4) is not none, then prev_node.next is the new_node(5)
+    [1,3,4,5,6]
+    '''
+    # -----------
+
+
+
     # Or Kim's solution 
 
     def insertValueIntoSortedLinkedList(l, value):
