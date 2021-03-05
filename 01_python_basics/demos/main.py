@@ -231,6 +231,37 @@ txt = "xxoO"
 print(xo(txt))
 
 """
+Challenge #7
+
+Given an unsorted list, create a function that returns the nth smallest
+element
+
+nth_smallest([7,5,3,1], 1) > 1
+nth_smallest([1,3,5,7], 3) > 5
+nth_smallest([1,3,5,7], 5) > None
+nth_smallest([7,3,5,1], 2) > 3
+
+Here the nth value starts at 1, but the array
+starts at 0. This is why we use n-1
+                    index  0 1 2 3
+After sorting we have s = [1,3,5,7]
+      [n-1] => [3-1] => 2      ^
+"""
+
+def nth_smallest(lst, n):
+    
+    s = sorted(lst)
+    
+    if n > len(lst):
+        return None
+    else:
+        return s[n-1]
+
+lst = [7,5,3,1]
+n = 3
+print(nth_smallest(lst, n))
+
+"""
 # Challenge 9
 
 Write a function that creates a dictionary with each (key, value) pair being
