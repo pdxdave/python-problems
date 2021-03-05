@@ -220,7 +220,15 @@ txt = "ooxXm"
 print(xo(txt))
 
 #3
-
+# The count() method returns the number of elements with the specified value.
+def xo(txt):
+    
+    txt = txt.lower()
+    return txt.count('x') == txt.count('o')
+            
+    
+txt = "xxoO"
+print(xo(txt))
 
 """
 # Challenge 9
