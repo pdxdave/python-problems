@@ -133,3 +133,26 @@ items = [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold"
 ruleKey = "color"
 ruleValue = "silver"  
 print(countMatches(items, ruleKey, ruleValue))
+
+
+# 7
+def interpret(command):
+    
+    dictionary = {
+       "G": "G",
+       "()": "o",
+       "(al)": "al"
+    }
+    
+    char_holder = ""
+    result = ""
+    
+    for key, value in enumerate(command):
+        char_holder += command[key]
+        if char_holder in dictionary:
+            result += dictionary[char_holder]
+            char_holder = ""
+    return result
+        
+command = "G()(al)"  
+print(interpret(command))
