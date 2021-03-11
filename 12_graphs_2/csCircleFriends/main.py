@@ -64,7 +64,7 @@ def dfs(node, friendship, seen):
 
 http://pythontutor.com/visualize.html#code=def%20csFriendCircles%28friendships%29%3A%0A%20%20%20%20%0A%20%20%20%20count%20%3D%200%20%20%23%20for%20groups%0A%20%20%20%20seen%20%3D%20set%28%29%0A%20%20%20%20%0A%20%20%20%20for%20person%20in%20range%28len%28friendships%29%29%3A%0A%20%20%20%20%20%20%20%20if%20person%20not%20in%20seen%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20count%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20dfs%28person,%20friendships,%20seen%29%0A%20%20%20%20return%20count%0A%0Adef%20dfs%28node,%20friendship,%20seen%29%3A%0A%20%20%20%20for%20person,%20is_friend%20in%20enumerate%28friendship%5Bnode%5D%29%3A%0A%20%20%20%20%20%20%20%20if%20is_friend%20and%20person%20not%20in%20seen%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20seen.add%28person%29%0A%20%20%20%20%20%20%20%20%20%20%20%20dfs%28person,%20friendship,%20seen%29%0A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%0Afriendships%20%3D%20%5B%5B1,1,0%5D,%20%5B1,1,0%5D,%20%5B0,0,1%5D%5D%20%20%0Aprint%28csFriendCircles%28friendships%29%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
 
-# 3 another DFS
+# 3 another DFS solution
 
 def csFriendCircles(friendships):
     
