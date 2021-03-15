@@ -156,3 +156,18 @@ def interpret(command):
         
 command = "G()(al)"  
 print(interpret(command))
+
+# 8 create a dictionary from two lists
+def testMe(names, index):
+    
+    dict = {}
+    for i in names:
+        for j in index:
+            dict[i] = j
+            index.remove(j)
+            break
+    return dict
+    
+names = ["frank", "steve", "kelly"]
+index = [0,1,2]  
+print(testMe(names, index))
