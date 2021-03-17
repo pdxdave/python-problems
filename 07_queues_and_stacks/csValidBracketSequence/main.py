@@ -40,4 +40,5 @@ def validBracketSequence(sequence):
     
 sequence = "()[]{}" # true
 sequence = "([)]" # false
+sequence = "[[(({()}))]]{()}[({})]" # True
 print(validBracketSequence(sequence))
