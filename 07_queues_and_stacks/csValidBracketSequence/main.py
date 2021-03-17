@@ -13,6 +13,9 @@ For sequence = "()[]{}", the output should be validBracketSequence(sequence) = t
 For sequence = "(]", the output should be validBracketSequence(sequence) = false;
 For sequence = "([)]", the output should be validBracketSequence(sequence) = false;
 For sequence = "{[]}", the output should be validBracketSequence(sequence) = true.
+
+If the current character is a starting bracket (‘(‘ or ‘{‘ or ‘[‘) then push it to stack.
+If the current character is a closing bracket (‘)’ or ‘}’ or ‘]’) then pop from stack and if the popped character is the matching starting bracket then it is True, otherwise it's False.
 '''
 def validBracketSequence(sequence):
     
