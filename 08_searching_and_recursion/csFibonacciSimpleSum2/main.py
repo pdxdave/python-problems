@@ -24,6 +24,14 @@ fibonacciSimpleSum2(n) = false.
 
 '''
 # 1 solution
+
+# We can start a Fibonacci list with 0,1 since all Fibonacci
+# lists start with 0,1 anyway.
+
+# Create two variables.  One for 0 and one for 1
+
+# While the last number in our list is less than the n
+# parameter that is passed in...
 def fibonacciSimpleSum2(n):
     
     F = [0,1]
@@ -56,7 +64,7 @@ print(fibonacciSimpleSum2(n))
 
 # Next is a nested for loop.  It will add all the possible
 # combinations between x and y to see if it can match the
-# n parameter.  This takes a lot of passes.
+# n parameter.  This takes a lot of passes -- 107.
 
 def fibonacciSimpleSum2(n):
     
