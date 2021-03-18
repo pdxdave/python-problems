@@ -45,6 +45,19 @@ n = 66
 print(fibonacciSimpleSum2(n))
 
 # 2 solution
+
+# A brute force solution
+
+# The while loop checks to make sure that the last number
+# in the list is less than the n parameter passed through
+# the function.  Next it appends to the list the sum of the
+# last and second to the last numbers in the list.  Once
+# we exceed the value of n we break out of the while loop.
+
+# Next is a nested for loop.  It will add all the possible
+# combinations between x and y to see if it can match the
+# n parameter.  This takes a lot of passes.
+
 def fibonacciSimpleSum2(n):
     
     F = [0,1]
