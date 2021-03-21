@@ -114,11 +114,159 @@ post-order printing
 
 pre-order printing
     print
-    go right
     go left
+    go right
 
 in-order printing
     go left
     print
     go right
-```
+'''
+# InOrder Traversal
+'''
+        1
+      /   \
+     2     3
+          /  \
+         4    5
+
+#[2,1,4,3,5]
+'''
+class BinaryTreeNode:
+    def __init__(self, value=0, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+    
+    def insert(self, value):
+        if value < self.value:
+            if self.left is None:
+                self.left = BinaryTreeNode(value)
+            else:
+                self.left.insert(value)
+        else:
+            if self.right is None:
+                self.right = BinaryTreeNode(value)
+            else:
+                self.right.insert(value)
+                
+    def inorder(self):
+
+        if self.value == None:
+            return
+        
+        if self.left is not None:
+            self.left.inorder()
+            
+        print(self.value)
+        
+        if self.right is not None:
+            self.right.inorder()
+            
+b1 = BinaryTreeNode(1)
+b1.left = BinaryTreeNode(2)
+b1.right = BinaryTreeNode(3)
+b1.right.left = BinaryTreeNode(4)
+b1.right.right = BinaryTreeNode(5)
+b1.inorder() 
+
+
+
+
+
+# PreOrder Traversal
+'''
+        1
+      /   \
+     2     3
+          /  \
+         4    5
+
+#[1,2,3,4,5]
+'''
+class BinaryTreeNode:
+    def __init__(self, value=0, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+    
+    def insert(self, value):
+        if value < self.value:
+            if self.left is None:
+                self.left = BinaryTreeNode(value)
+            else:
+                self.left.insert(value)
+        else:
+            if self.right is None:
+                self.right = BinaryTreeNode(value)
+            else:
+                self.right.insert(value)
+                
+    def pre_order(self):
+        if self.value == None:
+            return 
+
+        print(self.value)
+
+        if self.left is not None:
+            self.left.pre_order()
+
+        if self.right is not None:
+            self.right.pre_order()
+            
+b1 = BinaryTreeNode(1)
+b1.left = BinaryTreeNode(2)
+b1.right = BinaryTreeNode(3)
+b1.right.left = BinaryTreeNode(4)
+b1.right.right = BinaryTreeNode(5)
+b1.pre_order()
+
+# Post-Order Traversal
+'''
+        1
+      /   \
+     2     3
+          /  \
+         4    5
+
+#[2,4,5,3,1]
+'''
+class BinaryTreeNode:
+    def __init__(self, value=0, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+    
+    def insert(self, value):
+        if value < self.value:
+            if self.left is None:
+                self.left = BinaryTreeNode(value)
+            else:
+                self.left.insert(value)
+        else:
+            if self.right is None:
+                self.right = BinaryTreeNode(value)
+            else:
+                self.right.insert(value)
+                
+    def post_order(self):
+        if self.value == None:
+            return 
+        
+        if self.left is not None:
+            self.left.post_order()
+            
+        if self.right is not None:
+            self.right.post_order()
+            
+        print(self.value)
+            
+        
+            
+     
+b1 = BinaryTreeNode(1)
+b1.left = BinaryTreeNode(2)
+b1.right = BinaryTreeNode(3)
+b1.right.left = BinaryTreeNode(4)
+b1.right.right = BinaryTreeNode(5)
+b1.post_order()
