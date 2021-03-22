@@ -122,7 +122,8 @@ in-order printing
     print
     go right
 '''
-# InOrder Traversal
+# In-Order Traversal
+# https://www.educative.io/edpresso/what-is-in-order-traversal
 '''
         1
       /   \
@@ -174,7 +175,8 @@ b1.inorder()
 
 
 
-# PreOrder Traversal
+# Pre-Order Traversal
+# https://www.educative.io/edpresso/what-is-pre-order-traversal
 '''
         1
       /   \
@@ -222,6 +224,7 @@ b1.right.right = BinaryTreeNode(5)
 b1.pre_order()
 
 # Post-Order Traversal
+# https://www.educative.io/edpresso/what-is-post-order-traversal
 '''
         1
       /   \
