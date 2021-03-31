@@ -18,6 +18,8 @@ strs = [""]
 Output:
 [[""]]
 
+The values() method returns a view object. The view object contains the values of the dictionary, as a list.
+
 '''
 
 def csGroupAnagrams(strs):
