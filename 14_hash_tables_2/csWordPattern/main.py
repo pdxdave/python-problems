@@ -21,7 +21,7 @@ false
 
 '''
 
-
+# Example 1
 def csWordPattern(pattern, a):
     
     strs = a.split()
@@ -49,3 +49,9 @@ def csWordPattern(pattern, a):
 pattern = "abba"
 t = "lambda school school lambda"
 print(csWordPattern(pattern, t))
+
+# Example 2
+def csWordPattern(pattern, a):
+    string1, string2 = set(pattern), set(a.split())
+
+    return len(string1) == len(string2)
