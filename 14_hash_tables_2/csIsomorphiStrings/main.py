@@ -22,7 +22,7 @@ b = "bar"
 Output:
 false
 '''
-
+# Example 1
 def csIsomorphicStrings(a, b):
     
     if len(a) != len(b):
@@ -42,3 +42,9 @@ def csIsomorphicStrings(a, b):
 a = "add"
 b = "egg"
 print(csIsomorphicStrings(a, b))
+
+
+# Example 2
+def csIsomorphicStrings(a, b):
+    string1, string2 = set(a), set(b)
+    return len(string1) == len(string2)
