@@ -21,7 +21,7 @@ Output:
 The values() method returns a view object. The view object contains the values of the dictionary, as a list.
 
 '''
-
+# Example 1
 def csGroupAnagrams(strs):
     
     dict = {}
@@ -50,6 +50,7 @@ print(csGroupAnagrams(strs))
 Someone asked how to do this with numbers.  There's probably a better way to do it, but I made a few small changes to the above code.
 
 '''
+# Example 2
 def csGroupAnagrams(strs):
     
     dict = {}
@@ -74,3 +75,14 @@ def csGroupAnagrams(strs):
 
 strs = [25, 35, 872, 228, 53, 278, 872]
 print(csGroupAnagrams(strs))
+
+# Example 3
+def csGroupAnagrams(strs):
+    anagrams = {}
+    for item in strs:
+        string = ''.join(sorted(item))
+        if string not in anagrams:
+            anagrams[string] = [item]
+        else:
+            anagrams[string].append(item)
+    return list(anagrams.values())
