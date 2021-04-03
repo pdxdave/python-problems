@@ -14,6 +14,7 @@ for how many numbers are needed to close the gap.
 For instance, 6 - 3 = 3, but from 3 to 6 only requires to additional     
 numbers: 4 and 5.  In this case, it takes two numbers to close that gap.
 '''
+# Ex 1
 def makeArrayConsecutive2(statues):
     count = 0
     statues.sort()
@@ -22,6 +23,26 @@ def makeArrayConsecutive2(statues):
             count += statues[i+1] - statues[i] - 1
             
     return count 
+
+statues = [6,2,3,8]
+print(makeArrayConsecutive2(statues))
+
+# Ex 2
+def makeArrayConsecutive2(statues):
+    
+    if len(statues) == 1:
+        return 0
+
+    count = 0
+    srt = sorted(statues)
+
+    for i in range(len(srt) -1):
+        if srt[i+1] - srt[i] == 1:
+            continue
+        else:
+            test = srt[i+1] - srt[i]
+            count += test-1
+    return count
 
 statues = [6,2,3,8]
 print(makeArrayConsecutive2(statues))
