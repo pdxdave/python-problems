@@ -16,4 +16,11 @@ n=3 returns an area of 13. The below calculation returns that.
 '''
 
 def shapeArea(n):
-    return n * n + (n-1)**2 
+    area = 1
+    i = 1
+    while i < n:
+        area += (i * 4)
+        i += 1
+    return area
+
+print(shapeArea(3))
