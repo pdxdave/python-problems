@@ -31,5 +31,14 @@ def csSumOfPositive(input_arr):
     result = list(filter(lambda x: x > 0, input_arr))
     return sum(result)
 
+
+    # solution 3
+    sum = 0
+    for i in input_arr:
+        if i >= 0:
+            sum += i 
+    return sum
+
+
 input_arr = ([1,2,3,-4,5])
 print(csSumOfPositive(input_arr))
