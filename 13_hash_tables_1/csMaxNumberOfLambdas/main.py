@@ -19,7 +19,7 @@ Input: text = "sctlamb"
 Output: 0
 '''
 
-
+# 1
 def csMaxNumberOfLambdas(text):
     
     letters_dict = {"l": 0, "m": 0, "b": 0, "d":0, "a":0}
@@ -30,3 +30,14 @@ def csMaxNumberOfLambdas(text):
     
     letters_dict['a'] = letters_dict['a'] / 2
     return min(letters_dict.values())
+
+
+# 2
+d = {"l": 0, "m": 0, "b": 0, "d":0, "a":0}
+
+    for e in text:
+        if e in d:
+            d[e] += 0.5
+        else:
+            d[e] += 1
+    return int(min(d.values()))
