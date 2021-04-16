@@ -66,3 +66,9 @@ def csSearchRotatedSortedArray(nums, target):
 nums = [6,7,0,1,2,3,4,5]
 target = 3
 print(csSearchRotatedSortedArray(nums, target))
+
+
+# 0(1) solution
+def csSearchRotatedSortedArray(nums, target):
+    if target > len(nums): return -1
+    return target - nums[0]
