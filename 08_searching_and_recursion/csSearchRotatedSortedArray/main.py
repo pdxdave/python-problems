@@ -19,7 +19,7 @@ Output: -1
 
 Your solution should have better than O(n) time complexity over the number of items in the list. There is an O(log n) solution. There is also an O(1) solution.
 '''
-
+# solution 1
 def csSearchRotatedSortedArray(nums, target):
     
     # example [6,7,0,1,2,3,4,5]
@@ -68,7 +68,36 @@ target = 3
 print(csSearchRotatedSortedArray(nums, target))
 
 
-# 0(1) solution
+# solution 2
+def csSearchRotatedSortedArray(nums, target):
+    
+    length = len(nums)
+    lenRight = nums[-1]
+    lenLeft = length - lenRight
+    
+    leftStart = lenRight + 1
+    
+    if target == 1:
+        return left
+    if target == length:
+        return length - lenRight - 1
+        
+    if target > lenRight:
+        return target - leftStart
+        
+    if target < leftStart:
+        return (lenLeft -1) + target
+
+nums = [6,7,0,1,2,3,4,5]
+target = 3
+print(csSearchRotatedSortedArray(nums, target))
+
+
+# solution 3 0(1) solution
 def csSearchRotatedSortedArray(nums, target):
     if target > len(nums): return -1
     return target - nums[0]
+
+nums = [6,7,0,1,2,3,4,5]
+target = 3
+print(csSearchRotatedSortedArray(nums, target))
