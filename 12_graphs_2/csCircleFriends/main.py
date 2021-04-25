@@ -1,4 +1,28 @@
 '''
+A -> B -> C
+
+	A is a direct friend of B
+	B is a direct friend of C
+	A is an indirect friend of C
+
+
+	Each row and column represents a person
+
+         0  1  2
+         -  -  -
+
+	0:   1  1  0
+
+	1:   1  1  0
+
+	2:   0  0  1
+
+
+	|student zero is a friend student one        friend circle one
+	|student one is a friend with student zero
+	|student two is a friend with himself        friend circle two
+
+
 There are N students in a baking class together. Some of them are friends, while some are not friends. The students' friendship can be considered transitive. This means that if Ami is a direct friend of Bill, and Bill is a direct friend of Casey, Ami is an indirect friend of Casey. A friend circle is a group of students who are either direct or indirect friends.
 
 Given a N*N matrix M representing the friend relationships between students in the class. If M[i][j] = 1, then the ith and jth students are direct friends with each other, otherwise not.
