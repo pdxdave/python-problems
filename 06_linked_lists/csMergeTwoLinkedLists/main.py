@@ -24,20 +24,21 @@ def mergeTwoLinkedLists(l1, l2):
         if l1.value < l2.value:
             cur.next = l1
             l1 = l1.next
+            cur = cur.next
         else:
             cur.next = l2
             l2 = l2.next
-        cur = cur.next # this updates the cur.next. it will for either list we're working with
+            cur = cur.next # this updates the cur.next. it will for either list we're working with
         
     # if there's a remaining portion of a list, this will insert it into the end. Either will work
     
-    # cur.next = l1 or l2 
+    cur.next = l1 or l2 
     
-    # if l1:
-    #     cur.next = l1
-    # elif l2:
-    #     cur.next = l2
-    # return newList.next
+    if l1:
+        cur.next = l1
+    elif l2:
+        cur.next = l2
+    return newList.next
         
     '''
     l1 = [1,2,4]
