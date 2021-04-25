@@ -31,6 +31,7 @@ def csMaxNumberOfLambdas(text):
     letters_dict['a'] = letters_dict['a'] / 2
     return min(letters_dict.values())
 
+print(csMaxNumberOfLambdas("mbxcdatlas")) # returns 1
 
 # 2
 d = {"l": 0, "m": 0, "b": 0, "d":0, "a":0}
@@ -41,3 +42,19 @@ d = {"l": 0, "m": 0, "b": 0, "d":0, "a":0}
         else:
             d[e] += 1
     return int(min(d.values()))
+
+# 3
+# Python dictionary method fromkeys() creates
+# a new dictionary with keys from seq and values set to value.
+
+def csMaxNumberOfLambdas(text):
+    
+    lam = dict.fromkeys('lambda',0)
+    
+    for char in text:
+        if char in lam:
+            lam[char] += 1
+    
+    return min(lam.values())
+    
+print(csMaxNumberOfLambdas("mbxcdatlas"))
