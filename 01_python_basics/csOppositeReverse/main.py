@@ -6,6 +6,8 @@
 # [::-1] will reverse all the characters
 
 # Objective 8 - perform basic string operations. Shows reverse.
+
+# solution 1
 def csOppositeReverse(txt):
 
     test = txt.swapcase()
@@ -16,7 +18,7 @@ txt = "ReVeRsE"
 print(csOppositeReverse(txt))
 
 
-# Another way.  Perhaps more like what new students would do
+# Solution 2
 def csOppositeReverse(txt):
 
     word = ""
