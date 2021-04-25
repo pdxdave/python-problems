@@ -47,3 +47,18 @@ def csFirstUniqueChar(input_str):
     
 input_str = "lambdaschool"
 print(firstUniqChar(input_str))
+
+# 3
+def csFirstUniqueChar(input_str):
+    
+    collection = []
+    for index, char in enumerate(input_str):
+        collection.append(char)
+        
+    for index, char in enumerate(input_str):
+        if collection.count(char) == 1:
+            return index
+    return -1
+    
+input_str = "lambdaschool"
+print(csFirstUniqueChar(input_str))
