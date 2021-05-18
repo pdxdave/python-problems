@@ -34,10 +34,10 @@ def mergeTwoLinkedLists(l1, l2):
     
     cur.next = l1 or l2 
     
-    if l1:
-        cur.next = l1
-    elif l2:
-        cur.next = l2
+    # if l1:
+    #     cur.next = l1
+    # elif l2:
+    #     cur.next = l2
     return newList.next
         
     '''
